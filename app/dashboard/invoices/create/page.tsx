@@ -13,7 +13,13 @@ export default async function Page() {
           { label: 'Create', href: '/dashboard/create' },
         ]}
       />
-      <Form customers={customers} />
+      <Form customers={customers} invoice={{
+        id: '',
+        customer_id: '',
+        amount: 0,
+        date: undefined,
+        status: 'pending'
+      }} />
     </main>
   )
 }
